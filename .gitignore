@@ -1,0 +1,106 @@
+# === Python ===
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg-info/
+.Python
+.python-version
+venv/
+.venv/
+env/
+ENV/
+
+# === Editor/IDE Files ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.~lock.*
+Icon?
+
+# === Pytest ===
+.cache/
+.pytest_cache/
+
+# === Pyright ===
+pyrightconfig.json
+typings/
+
+# === Ruff ===
+ruff_cache/
+
+# === MyPy ===
+.mypy_cache/
+
+# === Coverage ===
+htmlcov/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# === Alembic ===
+alembic/versions/*.pyc
+alembic/versions/__pycache__/
+# Uncomment if you auto-generate and commit migration scripts
+# alembic/versions/*.py
+
+# === Logs ===
+*.log
+*.log.*
+logs/
+*.out
+
+# === Docker ===
+*.tar
+*.img
+*.pid
+docker-compose.override.yml
+
+# === Environment / Secrets ===
+*.env
+.env.*
+secrets/**/*
+!secrets/**/.gitkeep  # Keep structure if you use placeholder files
+*.pem
+*.key
+*.crt
+
+# === Build / Distribution ===
+dist/
+build/
+wheelhouse/
+*.egg
+.eggs/
+MANIFEST
+
+# === CI/CD / GitHub Actions ===
+.github/workflows/.env
+.github/secrets/
+scripts/__pycache__/
+
+# === Local Dev Scripts ===
+*.sqlite3
+dev.db
+*.pid
+*.lock
+*.tmp
+*.pid
+*.lock
+
+# === Test Artifacts ===
+tests/__pycache__/
+tests/**/*.pyc
+tests/unit/__pycache__/
+tests/integration/__pycache__/
