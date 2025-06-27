@@ -181,8 +181,9 @@ This template is a living thing. Feel free to fork, submit PRs, or just steal th
 
 ## 📧 Contact
 
-Need advice or want to collaborate? [fazliddin1801@gmail.com](mailto:fazliddin1801@gmail.com)
-Or better you can find me from telegram at [@abdurahimov_f18][https://t.me/abdurahimov_f18]
+Need advice or want to collaborate?
+* **[email](mailto:fazliddin1801@gmail.com)** - I'm open on email
+* **[telegram](https://t.me/abdurahimov_f18)** - I'm more active on telegram
 
 ---
 
