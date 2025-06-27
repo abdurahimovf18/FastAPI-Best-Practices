@@ -38,100 +38,106 @@ It combines the **most modern tech stacks** and **clean architecture principles*
 alembic/
 
 secrets/
-  app/
-    logging/.env
-    database/.env
-    domain/.env
-  shared/
-    auth/
-      public.pem
-    xss/
-      .env
-
-scripts/
-  ci.py
+    app/
+        logging/
+            .env
+        database/
+            .env
+        domain/
+            .env
+    shared/
+        auth/
+            .env
+            public.pem
+        xss/
+            .env
 
 src/
-  project-name/
-    app/
-      main.py
-      loader.py
+    project-name/
+        api/
+            routers.py
 
-    services/
-      di.py
-      use_cases/
-      http/
-        service_http_service.py
-      queries/
-        users
-      dto/
-        schemas/
-          domain.py
-          users.py
-        parameters/
-          use_cases/
-            foo.py
-          http/
-            foo_service.py
-        responses/
-          use_cases/
-            foo.py
-          http/
-            foo_service.py
+        app/
+            main.py
+            loader.py
 
-    api/
-      routers.py
+        services/
+            di.py
+            use_cases/
+    
+            http/
+                service_http_service.py
+            queries/
+                users.py
+            dto/
+                schemas/
+                    domain.py
+                    users.py  # here is schema for http clients
+                parameters/
+                    use_cases/
+                        foo.py
+                    http/
+                        foo_service.py
+                responses/
+                    use_cases/
+                        foo.py
+                    http/
+                        foo_service.py
 
-    infrastructure/
-      database/
-        setup.py
-        setup_tools.py
-        di.py
-      kafka/
-        setup.py
-        setup_tools.py
-        di.py
-      rabbitmq/
-      redis/
+        infrastructure/
+            database/
+                setup.py
+                setup_tools.py
+                di.py
+            kafka/
+                setup.py
+                setup_tools.py
+                di.py
+            rabbitmq/
+            redis/
 
-    config/
-      base.py
-      logging_conf.py
-      database_conf.py
-      redis_conf.py
-      utils.py
+        config/
+            base.py
+            logging_conf.py
+            database_conf.py
+            redis_conf.py
+            utils.py
 
-    models/
-      __init__.py
-      domain.py
+        models/
+            __init__.py
+            domain.py
 
-    utils/
-      misc.py
-
-shared/
-  auth/
-    src/
-      di.py
-      utils/
-  xss/
-    src/
-      di.py
-      decorators.py
-      middlewares.py
-      utils/
+        utils/
         misc.py
 
-.github/workflows/
-  CI.yaml
-  CD.yaml
+    shared/
+        auth/
+            src/
+                di.py
+                decorators.py
+                middlewares.py
+                utils/
+                    misc.py
+                ...
+        ...
 
 tests/
-  conftest.py
-  unit/
-    shared/
-    src/
-      services/
-  integration/
+    conftest.py
+    unit/
+        shared/
+        src/
+            services/
+                ...
+            ...
+    integration/
+        ...
+
+.github/workflows/
+    CI.yaml
+    CD.yaml
+
+scripts/
+    ci.py
 
 pyproject.toml
 alembic.ini
