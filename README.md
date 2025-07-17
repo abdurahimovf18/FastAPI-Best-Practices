@@ -175,6 +175,7 @@ using main gunicorn process.
 * **Query layer** holds raw SQLAlchemy logic, not business logic
 * Supports **x-service-key** pattern for inter-service auth
 * Structured for real-world async services running via **Gunicorn** or **Uvicorn**
+* Application core is logic which is written in use_cases and used from anywhere
 
 ---
 
