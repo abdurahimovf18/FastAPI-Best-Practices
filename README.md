@@ -148,6 +148,25 @@ ruff.toml
 
 ---
 
+## ❓ FAQ
+
+### Was not this too small for big micro-service services?
+This architecture is designed to support services that targets one area and handles
+it's logic inside. Including one **[module.py](./)** file to saving the modules, and other decisions
+can help you build task orientated services that works both fast and correctly.
+
+### Where is versioning?
+On micro-services versioning is often a concern. While this architecture does not implement
+versioning on folder like system, it relies on an Nginx and Other services to apply versions
+of application. This system can improve both DX and correctness of application.
+
+### How to run?
+As long as this service relies on docker containers we will simply use gunicorn services on docker containers
+while parts like celery, rabbitmq consumers or any other part is ran using another process rather than
+using main gunicorn process.
+
+---
+
 ## 💡 Philosophy
 
 * **One source of truth** for schemas, injected everywhere as DTOs
