@@ -105,3 +105,6 @@ tests/__pycache__/
 tests/**/*.pyc
 tests/unit/__pycache__/
 tests/integration/__pycache__/
+
+# === External Util Files ===
+tree.txt
