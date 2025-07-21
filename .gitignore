@@ -36,6 +36,7 @@ typings/
 
 # === Ruff ===
 ruff_cache/
+.ruff_cache/
 
 # === MyPy ===
 .mypy_cache/
