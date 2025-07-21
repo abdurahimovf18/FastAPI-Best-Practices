@@ -1,25 +1,32 @@
-# === Python ===
-*.pyc
+# === Python Artifacts ===
+**/__pycache__/
+**/*.py[cod]
 *.pyo
 *.pyd
-__pycache__/
 *.so
+*.egg
 *.egg-info/
 .Python
 .python-version
-venv/
-.venv/
-env/
-ENV/
 
-# === Editor/IDE Files ===
+# === Virtual Environments ===
+venv*/
+env*/
+ENV*/
+.venv*/
+.virtualenv*/
+
+# === Editors / IDEs ===
 .vscode/
 .idea/
+*.sublime-workspace
+*.sublime-project
 *.swp
 *.swo
 *.bak
+*.tmp
 
-# === OS Files ===
+# === OS Generated Files ===
 .DS_Store
 Thumbs.db
 ehthumbs.db
@@ -27,12 +34,8 @@ ehthumbs.db
 Icon?
 
 # === Pytest ===
-.cache/
 .pytest_cache/
-
-# === Pyright ===
-pyrightconfig.json
-typings/
+.cache/
 
 # === Ruff ===
 ruff_cache/
@@ -45,17 +48,10 @@ ruff_cache/
 htmlcov/
 .coverage
 .coverage.*
-.cache/
 nosetests.xml
 coverage.xml
 *.cover
 *.py,cover
-
-# === Alembic ===
-alembic/versions/*.pyc
-alembic/versions/__pycache__/
-# Uncomment if you auto-generate and commit migration scripts
-# alembic/versions/*.py
 
 # === Logs ===
 *.log
@@ -68,43 +64,53 @@ logs/
 *.img
 *.pid
 docker-compose.override.yml
-
-# === Environment / Secrets ===
-*.env
-.env.*
-secrets/**/*
-!secrets/**/.gitkeep  # Keep structure if you use placeholder files
-*.pem
-*.key
-*.crt
+docker-compose.*.yml
 
 # === Build / Distribution ===
-dist/
 build/
+dist/
+*.whl
 wheelhouse/
-*.egg
-.eggs/
 MANIFEST
+.eggs/
+*.egg-info/
 
-# === CI/CD / GitHub Actions ===
-.github/workflows/.env
+# === CI/CD & GitHub ===
 .github/secrets/
-scripts/__pycache__/
+.github/workflows/.env
 
-# === Local Dev Scripts ===
+# === Alembic ===
+alembic/versions/__pycache__/
+alembic/versions/*.pyc
+# Uncomment if you generate & commit migration scripts
+# alembic/versions/*.py
+
+# === Local Dev Databases & Locks ===
 *.sqlite3
 dev.db
 *.pid
 *.lock
 *.tmp
-*.pid
-*.lock
 
-# === Test Artifacts ===
-tests/__pycache__/
+# === Environment / Secrets ===
+*.env
+.env.*
+secrets/**/*
+!secrets/**/.gitkeep
+*.pem
+*.key
+*.crt
+
+# === Type Checking / Linting ===
+typings/
+pyrightconfig.json
+
+# === Scripts ===
+scripts/**/__pycache__/
+
+# === Test Artifacts (keep tests, drop cache/compiled) ===
+tests/**/__pycache__/
 tests/**/*.pyc
-tests/unit/__pycache__/
-tests/integration/__pycache__/
 
 # === External Util Files ===
-# tree.txt
+tree.txt
