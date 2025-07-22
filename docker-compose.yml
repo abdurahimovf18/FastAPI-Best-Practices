@@ -1,0 +1,27 @@
+
+
+networks:
+  shared-net:
+    external: true
+    driver: overlay
+  
+  service:
+    external: false
+    driver: bridge
+
+volumes:
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports: 
+      - "80:80"
+    volumes:
+      - ./docker/nginx/nginx.conf /etc/nginx/nginx.conf:ro
+    networks:
+      - service
+    depends_on:
+      - api
+  
+  api:
+    image: ./docker/api/Dockerfile
