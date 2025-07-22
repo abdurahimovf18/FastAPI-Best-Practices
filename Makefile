@@ -9,7 +9,7 @@ lint-fix:
 type-check:
 	uv run pyright
 
-check-all: lint-code type-check
+check-all: lint-check type-check
 
 check-fix: lint-fix type-check
 
