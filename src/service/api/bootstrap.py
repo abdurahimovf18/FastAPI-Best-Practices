@@ -1,9 +1,7 @@
 from src.service.providers.fastapi_provider import create_instance
 
-from .routers import router
+# All REST and WebSocket routes grouped here
+from .routers import application_router
 
-# creating a FastAPI instance
 app = create_instance()
-
-# Registering router
-app.include_router(router)
+app.include_router(application_router)
