@@ -1,2 +1,20 @@
+.venv
+.ruff_cache
+secrets/
 
+**/*.env
+**/*.key
+**/*.pem
 
+.gitignore
+.ruff.toml
+tests/
+pytest.ini
+tree.txt
+
+**/__pycache__
+.github/
+.pytest_cache
+
+LICENSE
+README.md

@@ -6,5 +6,6 @@
 # here how the folder structure is created:
 # we have models.py where there are database models annotations. to use with DRY
 
-# also other files will contain http clients schemas, for example user.py contains user-service http 
-# client schemas which is important to make correct requests as well.
+# also other files will contain http clients schemas, for example user.py 
+# contains user-service http client schemas which is important to make 
+# correct requests as well.

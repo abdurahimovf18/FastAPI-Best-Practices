@@ -16,7 +16,7 @@ echo "CPU_COUNT=$CPU_COUNT"
 echo "REPLICA_COUNT=$REPLICA_COUNT"
 echo "Starting with $WORKER_COUNT workers..."
 
-exec gunicorn src.service.api.main:app \
+exec uv run gunicorn src.service.api.main:app \
   --workers "$WORKER_COUNT" \
   --worker-class uvicorn.workers.UvicornWorker \
   --bind 0.0.0.0:8000
