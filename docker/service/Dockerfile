@@ -13,6 +13,7 @@ COPY uv.lock .
 
 # Create virtual environment inside the image
 RUN uv venv
+RUN uv lock
 RUN uv sync
 
 # Copy the rest of the application code
